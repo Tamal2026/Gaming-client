@@ -1,13 +1,29 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
-
+  const [logError, setlogError] = useState('');
+  const [logSuccess,setLogSuccess] = useState('');
+const {signIn} = useContext(AuthContext);
   const handleLogin = e =>{
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(name,email,password);
+    setLogSuccess('');
+setlogError('');
+
+    signIn(email,password)
+    .then((result =>{
+      console.log(result.user);
+      
+    }))
+    .catch((error =>{
+      console.error(error);
+    setlogError('Your Email and password is not correct')
+    }))
 }
 
 
@@ -52,11 +68,15 @@ const Login = () => {
           </form>
           <div className="text-center mb-6">
             <p>
-              New Here?Please Go To{" "}
-              <Link className="text-bold text-green-600" to="/register">
+              New Here ? Please Go To{" "}
+              <Link className="font-bold text-green-600" to="/register">
                 Register
               </Link>
             </p>
+            {
+             logError && <p className="text-red-700">{logError}</p>
+            }
+           
           </div>
         </div>
       </div>
