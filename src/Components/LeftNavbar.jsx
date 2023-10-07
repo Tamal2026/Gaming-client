@@ -1,22 +1,20 @@
 
-const LeftNavbar = () => {
-    return (
-        <div className="sticky top-10">
-           <div className="mx-auto mt-4 w-5/6 ">
-            <h1 className="text-3xl font-semibold bg-lime-600 text-white rounded-lg pl-2 py-2">Upcomming Events</h1>
-           </div>
-           <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row">
-    <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
-    <div>
-      <h1 className="text-5xl font-bold">Box Office News!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
+import { useEffect, useState } from "react";
+import LeftNavCard from "./LeftNavCard";
 
-  
+const LeftNavbar = () => {
+  const [commingEvents,setCommingEvent] = useState();
+  useEffect(() => {
+    fetch("upcomming.json")
+      .then((res) => res.json())
+      .then((data) => setCommingEvent(data));
+  }, []);
+    return (
+        <div className="sticky top-4">
+      <h1 className="text-3xl font-semibold bg-lime-600 text-white rounded-lg pl-2 py-2">Upcomming Events</h1>
+{
+  commingEvents?.map(event =><LeftNavCard key={event.id}event={event}></LeftNavCard>)
+}
         </div>
     );
 };
