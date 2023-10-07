@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Gamescom 2023",
+      "img": "https://i.ibb.co/Xp15R7V/F4i-Kq-DLE1o6ve9h-Jry-CFA.jpg",
+      "eventDate": "2023-08-20",
+      "platform": "Hybrid (Physical and Online)",
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "name": "PAX West 2023",
+      "img": "https://i.ibb.co/PTWmNKy/paxwest-1.webp",
+      "eventDate": "2023-09-01",
+      "platform": "Physical",
+      "rating": 4.6
+    },
+    {
+      "id": 3,
+      "name": "BlizzCon 2023",
+      "img": "https://i.ibb.co/Sx8Pbd4/Blizz.jpg",
+      "eventDate": "2023-11-04",
+      "platform": "Online",
+      "rating": 4.9
+    }
+  ]
+  

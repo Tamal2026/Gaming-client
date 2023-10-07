@@ -8,7 +8,7 @@ const Home = () => {
  
  
     return (
-        <div className="grid lg:grid-cols-5 gap">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap">
             <div className="col-span-1">
 <LeftNavbar></LeftNavbar>
             </div>

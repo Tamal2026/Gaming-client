@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Navbar = () => {
-const {user,logOut} = useContext(AuthContext)
+const {user,logOut,} = useContext(AuthContext)
 
 const handleSignout = ()=>{
 logOut()
@@ -58,9 +58,11 @@ const navLinks =
         </div>
         
         <div className="navbar-end gap-3">
-        <div className="w-10 ">
-          <img className="rounded-full" src="https://i.ibb.co/Dpzvxv7/01.jpg" />
-        </div>
+       {
+        user &&  <div className="w-10 ">
+        <img className="rounded-full" src="https://i.ibb.co/ZTFfkFc/user.png" />
+      </div>
+       }
         {
           user ?  <button onClick={handleSignout} className="btn btn-primary bg-red-600">Logout
           </button> :
