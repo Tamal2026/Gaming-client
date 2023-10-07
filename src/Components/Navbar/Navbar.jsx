@@ -15,10 +15,15 @@ const navLinks =
     <>
     
     <li><NavLink to="/">Home</NavLink></li>
+    <li><NavLink to="/about">About</NavLink></li>
+
+
     {user ? (
   <>
-  
-    <li><NavLink to="/upcomming">Upcoming Event</NavLink></li>
+
+    <li><NavLink to="/contact">Contact</NavLink></li>
+    <li><NavLink to="/blog">Blog</NavLink></li>
+    
   </>
 ) : (
   <>
@@ -51,7 +56,11 @@ const navLinks =
            {navLinks}
           </ul>
         </div>
-        <div className="navbar-end">
+        
+        <div className="navbar-end gap-3">
+        <div className="w-10 ">
+          <img className="rounded-full" src="https://i.ibb.co/Dpzvxv7/01.jpg" />
+        </div>
         {
           user ?  <button onClick={handleSignout} className="btn btn-primary bg-red-600">Logout
           </button> :

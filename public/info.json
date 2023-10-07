@@ -6,7 +6,7 @@
     "price": "$20",
     "title": "Professional installation of your favorite games.",
     "details": "Our team of experts will install and configure your chosen games on your gaming system. Sit back and enjoy hassle-free gaming.",
-    "additionalFeatures": ["Quick setup", "Optimized performance", "Multiple game support"]
+    "additionalFeatures": ["Quick setup" ,  "Optimized performance" ,  "Multiple game support"]
   },
   {
     "id": 2,

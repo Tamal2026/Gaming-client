@@ -11,9 +11,11 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
-import Upcoming from './Components/Upcoming';
 import ServiceDetails from './ServiceDetails';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import About from './Components/About';
+import Blog from './Components/Blog';
+import Contact from './Components/Contact';
 
 const routes = [
   {
@@ -35,16 +37,22 @@ const routes = [
       },
      
       {
-        path:'/upcomming',
-        element:<Upcoming></Upcoming>
-      },
-      {
         path:'/service/:id',
         element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader:()=>fetch('/info.json')
 
-      },
-   
+      },{
+        path:'/about',
+        element:<About></About>
+      }
+   ,{
+    path:'/blog',
+    element:<Blog></Blog>
+   },
+   {
+    path:'contact',
+    element:<Contact></Contact>
+   }
     ],
   },
 ];

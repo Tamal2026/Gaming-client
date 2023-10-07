@@ -9,6 +9,7 @@ const Login = () => {
 const {signIn} = useContext(AuthContext);
 
 const location = useLocation();
+console.log(location);
 const naviGate = useNavigate();
 
   const handleLogin = e =>{
@@ -25,8 +26,8 @@ setlogError('');
       console.log(result.user);
 
       setLogSuccess('logged in SucccessFully')
-      naviGate(location?.state?location.state:'/')
-      return;
+      naviGate(location?.state ? location.state:'/')
+      
     }))
     .catch((error =>{
       console.error(error);
