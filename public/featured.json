@@ -1,0 +1,34 @@
+
+     [
+      {
+        "id": 1,
+        "title": "Fortnite",
+        "description": "Join the battle royale phenomenon and compete for victory.",
+        "image": "https://example.com/images/fortnite.jpg",
+        "releaseDate": "2020-07-25",
+        "platforms": ["PC", "PlayStation", "Xbox", "Nintendo Switch"],
+        "price": "Free-to-play",
+        "rating": 4.5
+      },
+      {
+        "id": 2,
+        "title": "Apex Legends",
+        "description": "Form a squad of legendary characters and fight for survival in this fast-paced battle royale.",
+        "image": "https://example.com/images/apex-legends.jpg",
+        "releaseDate": "2019-02-04",
+        "platforms": ["PC", "PlayStation", "Xbox"],
+        "price": "Free-to-play",
+        "rating": 4.6
+      },
+      {
+        "id": 3,
+        "title": "League of Legends",
+        "description": "Dive into the world of strategic team-based battles in this multiplayer online battle arena (MOBA).",
+        "image": "https://example.com/images/league-of-legends.jpg",
+        "releaseDate": "2009-10-27",
+        "platforms": ["PC"],
+        "price": "Free-to-play",
+        "rating": 4.7
+      }
+    ]
+  

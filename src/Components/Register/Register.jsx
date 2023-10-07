@@ -36,7 +36,7 @@ const Register = () => {
       })
       .catch((error) => {
         console.error(error);
-        setRegError('Error:You already used this email');
+        setRegError('Not a valid Email')
       });
   };
 

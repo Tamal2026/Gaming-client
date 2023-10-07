@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate,  } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+  const {user} = useContext(AuthContext)
   const [logError, setlogError] = useState('');
   const [logSuccess,setLogSuccess] = useState('');
 const {signIn} = useContext(AuthContext);
+
   const handleLogin = e =>{
     e.preventDefault();
     const name = e.target.name.value;
@@ -18,7 +20,8 @@ setlogError('');
     signIn(email,password)
     .then((result =>{
       console.log(result.user);
-      
+      setLogSuccess('logged in SucccessFully')
+      return;
     }))
     .catch((error =>{
       console.error(error);
@@ -26,6 +29,9 @@ setlogError('');
     }))
 }
 
+if (user){
+  return <Navigate to='/'></Navigate>
+}
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -75,6 +81,8 @@ setlogError('');
             </p>
             {
              logError && <p className="text-red-700">{logError}</p>
+            }{
+              logSuccess && <p className="text-green-600">{logSuccess}</p>
             }
            
           </div>

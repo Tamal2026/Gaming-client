@@ -1,6 +1,6 @@
 import React  from 'react'
 import ReactDOM from 'react-dom/client'
-
+import Event from './Components/Event';
 import './index.css'
 import {
   createBrowserRouter,
@@ -11,6 +11,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
+import Upcoming from './Components/Upcoming';
 
 const routes = [
   {
@@ -20,6 +21,7 @@ const routes = [
       {
         path: '/',
         element: <Home />,
+   
       },
       {
         path: '/login',
@@ -29,6 +31,14 @@ const routes = [
         path: '/register',
         element: <Register />,
       },
+      {
+        path:'/event',
+        element:<Event></Event>
+      },
+      {
+        path:'/upcomming',
+        element:<Upcoming></Upcoming>
+      }
     ],
   },
 ];

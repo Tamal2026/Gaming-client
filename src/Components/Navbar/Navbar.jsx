@@ -15,8 +15,18 @@ const navLinks =
     <>
     
     <li><NavLink to="/">Home</NavLink></li>
+    {user ? (
+  <>
+    <li><NavLink to="/event">Event</NavLink></li>
+    <li><NavLink to="/upcomming">Upcoming</NavLink></li>
+  </>
+) : (
+  <>
     <li><NavLink to="/login">Login</NavLink></li>
     <li><NavLink to="/register">Register</NavLink></li>
+  </>
+)}
+
     
     </>
 
@@ -32,7 +42,7 @@ const navLinks =
              {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a className="btn btn-ghost normal-case text-xl">Gaming Event</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

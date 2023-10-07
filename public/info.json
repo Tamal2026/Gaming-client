@@ -1,0 +1,47 @@
+
+     [
+      {
+        "id": 1,
+        "name": "Game Installation",
+        "image": "https://i.ibb.co/Dpzvxv7/01.jpg",
+        "price": "$20",
+        "description": "Professional installation of your favorite games."
+      },
+      {
+        "id": 2,
+        "name": "Game Streaming",
+        "image": "https://i.ibb.co/BHhzW76/02.jpg",
+        "price": "$15/hour",
+        "description": "Enjoy real-time streaming of popular games."
+      },
+      {
+        "id": 3,
+        "name": "Game Customization",
+        "image": "https://i.ibb.co/xL569R1/03.webp",
+        "price": "$30",
+        "description": "Customize your in-game character and settings."
+      },
+      {
+        "id": 4,
+        "name": "Game Support",
+        "image": "https://i.ibb.co/dQSsx4Z/04.jpg",
+        "price": "$10/hour",
+        "description": "Get expert support for troubleshooting game issues."
+      },
+      {
+        "id": 5,
+        "name": "Game Tutorials",
+        "image": "https://i.ibb.co/wCTpHWG/05.webp",
+        "price": "$5/tutorial",
+        "description": "Learn advanced gaming techniques with our tutorials."
+      },
+      {
+        "id": 6,
+        "name": "Game Accessories",
+        "image": "https://i.ibb.co/DzhvwK2/06.png",
+        "price": "$Varies",
+        "description": "Explore a range of gaming accessories for your setup."
+      }
+    ]
+  
+  
