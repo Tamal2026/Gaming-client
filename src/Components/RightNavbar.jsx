@@ -2,7 +2,7 @@
 
 const RightNavbar = () => {
     return (
-        <div>
+        <div className="sticky top-10  ">
             <div className="mx-auto mt-4 w-5/6 ">
             <h1 className="text-3xl font-semibold bg-sky-700 text-white rounded-lg pl-2  text-center py-2">Featured Games</h1>
            </div>

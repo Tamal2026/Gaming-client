@@ -1,7 +1,7 @@
 
 const LeftNavbar = () => {
     return (
-        <div>
+        <div className="sticky top-10">
            <div className="mx-auto mt-4 w-5/6 ">
             <h1 className="text-3xl font-semibold bg-lime-600 text-white rounded-lg pl-2 py-2">Upcomming Events</h1>
            </div>
