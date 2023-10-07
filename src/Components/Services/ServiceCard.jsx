@@ -6,8 +6,8 @@ const {name,image,title,id} = service;
 
 
     return (
-        <div>
-   <div className="card w-96  shadow-xl">
+        <div className="mt-10 ">
+   <div className="card w-96  shadow-2xl">
     
   <figure><img src={image} alt="Shoes" className="w-full h-[250px] object-cover rounded-t-lg" /></figure>
   <div className="card-body">

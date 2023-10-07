@@ -1,6 +1,6 @@
 import React  from 'react'
 import ReactDOM from 'react-dom/client'
-import Event from './Components/Event';
+
 import './index.css'
 import {
   createBrowserRouter,
@@ -33,19 +33,18 @@ const routes = [
         path: '/register',
         element: <Register />,
       },
-      {
-        path:'/event',
-        element:<Event></Event>
-      },
+     
       {
         path:'/upcomming',
         element:<Upcoming></Upcoming>
       },
       {
         path:'/service/:id',
-        element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>
+        element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
+        loader:()=>fetch('/info.json')
 
-      }
+      },
+   
     ],
   },
 ];

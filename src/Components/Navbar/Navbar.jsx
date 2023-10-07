@@ -17,8 +17,8 @@ const navLinks =
     <li><NavLink to="/">Home</NavLink></li>
     {user ? (
   <>
-    <li><NavLink to="/event">Event</NavLink></li>
-    <li><NavLink to="/upcomming">Upcoming</NavLink></li>
+  
+    <li><NavLink to="/upcomming">Upcoming Event</NavLink></li>
   </>
 ) : (
   <>
@@ -26,6 +26,8 @@ const navLinks =
     <li><NavLink to="/register">Register</NavLink></li>
   </>
 )}
+
+
 
     
     </>

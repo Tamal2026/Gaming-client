@@ -6,7 +6,6 @@ const ServiceDetails = () => {
     return (
         <div>
             <p>{id}</p>
-            <p>hello</p>
         </div>
     );
 };
