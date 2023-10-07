@@ -1,18 +1,23 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const ServiceCard = ({service}) => {
-const {name,image,price} = service;
+const {name,image,title,id} = service;
 
 
     return (
         <div>
-   <div className="card w-96  bg-base-100 shadow-xl">
-    <p>{name}</p>
-  <figure><img src={image} alt="Shoes" /></figure>
+   <div className="card w-96  shadow-xl">
+    
+  <figure><img src={image} alt="Shoes" className="w-full h-[250px] object-cover rounded-t-lg" /></figure>
   <div className="card-body">
-    <h2 className="card-title">{price}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+  <p className=" bg-teal-600 text-white font-semibold rounded-lg w1/2 pl-2">{name}</p>
+    <p>{title}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">See Details</button>
+      <div>
+      <Link to={`/service/${id}`}>  <button className="btn btn-primary">See Details</button> </Link>
+      </div>
+    
     </div>
   </div>
 </div>

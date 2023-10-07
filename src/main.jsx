@@ -12,6 +12,8 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import Upcoming from './Components/Upcoming';
+import ServiceDetails from './ServiceDetails';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 const routes = [
   {
@@ -38,6 +40,11 @@ const routes = [
       {
         path:'/upcomming',
         element:<Upcoming></Upcoming>
+      },
+      {
+        path:'/service/:id',
+        element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>
+
       }
     ],
   },
