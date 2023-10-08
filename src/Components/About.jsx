@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 const About = () => {
     return (
-      <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-semibold mb-4 bg-emerald-600 text-white py-2 w-1/6 text-center rounded-lg mx-auto">About Us</h1>
-        <p className="mb-4">
+      <div className="container mx-auto py-8 px-4">
+        <h1 className="text-3xl font-semibold mb-4 bg-emerald-600 text-white py-2 py-2 w-2/4  lg:w-1/6  text-center rounded-lg mx-auto">About Us</h1>
+        <p className="mb-4 mt-7">
           Welcome to our gaming event website! We are passionate about gaming and dedicated to providing you with the best gaming experiences.
         </p>
         <p className="mb-4">

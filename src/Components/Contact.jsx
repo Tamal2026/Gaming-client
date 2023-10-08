@@ -4,8 +4,8 @@
 
 const Contact = () => {
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-semibold mb-10 bg-emerald-600 text-white py-2 w-1/6 text-center rounded-lg mx-auto">
+    <div className="container mx-auto py-8 px-4">
+      <h1 className="text-3xl font-semibold mb-10 bg-emerald-600 text-white py-2 w-2/4  lg:w-1/6 text-center rounded-lg mx-auto">
         Contact Us
       </h1>
       <div className=" rounded-lg shadow-md p-8">

@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Navbar = () => {
 const {user,logOut,} = useContext(AuthContext)
+Aos.init({duration:'2000'});
+useEffect(()=>{
 
+},[]) 
 const handleSignout = ()=>{
 logOut()
 .then()
@@ -15,7 +20,7 @@ const navLinks =
     <>
     
     <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/about">About</NavLink></li>
+    
 
 
     {user ? (
@@ -23,7 +28,7 @@ const navLinks =
 
     <li><NavLink to="/contact">Contact</NavLink></li>
     <li><NavLink to="/blog">Blog</NavLink></li>
-    
+    <li><NavLink to="/about">About</NavLink></li>
   </>
 ) : (
   <>
@@ -49,7 +54,15 @@ const navLinks =
              {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">Gaming Event</a>
+          <div data-aos = "fade-left">
+                <h1 className="bg-red-600 mr-3 px-2 rounded-lg  text-white py-2 font-bold" >Welcome</h1>
+            </div>
+          <div data-aos = "zoom-in">
+                <h1 className="bg-blue-600 mr-3 px-2 rounded-lg  text-white py-2 " >Gaming Event</h1>
+            </div>
+          <div data-aos = "fade-right" className=""  >
+                <h1 className="bg-cyan-700  px-2 rounded-lg   text-white py-2  " >2023</h1>
+            </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

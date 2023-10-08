@@ -15,12 +15,12 @@ const LeftNavbar = () => {
   }, []);
     return (
         <div className="sticky top-4">
-      <h1 className="text-3xl font-semibold bg-lime-600 text-white rounded-lg pl-2 py-2">Upcomming Events</h1>
+      <h1 className="text-3xl font-semibold bg-lime-600 w-3/4 text-center mt-2 mx-auto lg:w-full text-white rounded-lg pl-2 py-2">Upcomming Events</h1>
 {
   user ?
     commingEvents?.map(event =><LeftNavCard key={event.id}event={event}></LeftNavCard>)
   : <div className="text-center ">
-  <Link to="/login"> <p className="bg-red-600 w-1/3 mx-auto text-white font-semibold text-center mt-52  px-2 py-1 rounded-lg"> Login</p>
+  <Link to="/login"> <p className="bg-red-600 w-1/3 mx-auto text-white font-semibold text-center mt-24 lg:mt-52  px-2 py-1 rounded-lg"> Login</p>
   <p className="mt-5">For See All Upcoming Events</p> </Link> 
   
   </div>

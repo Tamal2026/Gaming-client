@@ -11,7 +11,7 @@ const LeftNavCard = ({ event }) => {
           <div className="card mx-6 card-side bg-base-100 mb-5 shadow-2xl">
   <figure><img src={img} alt="Movie"className="h-[120px] w-[500px]"/></figure>
   <div className="card-body">
-a
+    <h2 className="card-title bg-sky-500 py-1 font-bold text-white rounded-lg px-2">{name}</h2>
 
     <div className="card-actions justify-end">
     <p className="">Event Date: {eventDate}</p>

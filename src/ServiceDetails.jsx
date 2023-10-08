@@ -10,13 +10,13 @@ const ServiceDetails = () => {
     const {id} = useParams();
     const Data = useLoaderData();
     useEffect(()=>{
-        const findService = Data?.find(service => service.id ==id)
+        const findService = Data?.find(service => service.id == id)
         setService(findService)
     },[id,Data])
-    console.log(Data);
+  
     return (
         <div>
-            <p>{id}</p>
+           
             <ServiceShow service={sevice}></ServiceShow>
         </div>
     );

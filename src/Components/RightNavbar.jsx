@@ -14,7 +14,7 @@ const [featured,setFeatured] = useState();
   }, []);
     return (
         <div className="sticky top-4">
-           <h1 className="text-3xl font-semibold bg-sky-700 text-white rounded-lg pl-2  text-center py-2">Featured Games</h1>
+           <h1 className="text-3xl font-semibold bg-sky-700 text-white rounded-lg pl-2 mx-auto w-3/4 lg:w-full  text-center py-2">Featured Games</h1>
           { user ?
             featured?.map(feature =><RightNavCard key={feature.id} feature={feature}></RightNavCard>) 
            : <div className="text-center ">

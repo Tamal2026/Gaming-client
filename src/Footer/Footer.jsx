@@ -1,26 +1,29 @@
 
 import { FaFacebookF,FaInstagram } from 'react-icons/fa';
 import { FiTwitter } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div >
             <footer className="footer p-10 bg-base-200 text-base-content">
-  <nav>
+ <section className='grid grid-cols-2 gap-40  lg:footer'>
+ <nav>
     <header className="footer-title">Services</header> 
-    <a className="link link-hover"> Installation</a> 
-    <a className="link link-hover"> Streaming</a> 
-    <a className="link link-hover"> Customization</a> 
-    <a className="link link-hover"> Support</a>
-    <a className="link link-hover"> Tutorials</a>
+    <a className="link link-hover"> Installation</a> <br />
+    <a className="link link-hover"> Streaming</a> <br />
+    <a className="link link-hover"> Customization</a> <br />
+    <a className="link link-hover"> Support</a> <br />
+    <a className="link link-hover"> Tutorials</a><br />
     <a className="link link-hover"> Accessories</a>
   </nav> 
-  <nav>
+  <nav >
     <header className="footer-title">Company</header> 
-    <a className="link link-hover">About us</a> 
-    <a className="link link-hover">Contact</a> 
-    <a className="link link-hover">Jobs</a> 
-    <a className="link link-hover">Press kit</a>
+ <Link to="/about"> <button className="link link-hover">About</button> <br /> 
+ </Link>
+    <Link to="/contact"><button className="link link-hover">Contact</button> 
+</Link>
   </nav> 
+ </section>
   <nav>
     <header className="footer-title">Find US On</header> 
    <div className='flex gap-2 items-center'>

@@ -44,7 +44,7 @@ const routes = [
 
       },{
         path:'/about',
-        element:<About></About>
+        element:<PrivateRoute><About></About></PrivateRoute>
       }
    ,{
     path:'/blog',
@@ -52,7 +52,7 @@ const routes = [
    },
    {
     path:'contact',
-    element:<Contact></Contact>
+    element:<PrivateRoute><Contact></Contact></PrivateRoute>
    }
     ],
   },
