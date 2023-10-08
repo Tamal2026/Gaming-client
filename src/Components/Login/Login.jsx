@@ -1,43 +1,60 @@
 import { useContext, useState } from "react";
-import { Link, Navigate, useLocation, useNavigate,  } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { app } from "../../FireBase/Firebase.config";
 
 const Login = () => {
-  const {user} = useContext(AuthContext)
-  const [logError, setlogError] = useState('');
-  const [logSuccess,setLogSuccess] = useState('');
-const {signIn} = useContext(AuthContext);
+  const auth = getAuth(app);
 
-const location = useLocation();
-console.log(location);
-const naviGate = useNavigate();
+  const { user } = useContext(AuthContext);
+  const [logError, setlogError] = useState("");
+  const [logSuccess, setLogSuccess] = useState("");
+  const { signIn } = useContext(AuthContext);
 
-  const handleLogin = e =>{
+  const location = useLocation();
+  console.log(location);
+  const naviGate = useNavigate();
+
+  const googleProvider = new GoogleAuthProvider();
+  const handlegoogleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+       
+      })
+      .catch(error =>{
+        console.error(error);
+      });
+  };
+
+  const handleLogin = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name,email,password);
-    setLogSuccess('');
-setlogError('');
+    console.log(name, email, password);
 
-    signIn(email,password)
-    .then((result =>{
-      console.log(result.user);
+    setLogSuccess("");
+    setlogError("");
 
-      setLogSuccess('logged in SucccessFully')
-      naviGate(location?.state ? location.state:'/')
-      
-    }))
-    .catch((error =>{
-      console.error(error);
-    setlogError('Your Email and password is not correct')
-    }))
-}
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
 
-if (user){
-  return <Navigate to='/'></Navigate>
-}
+        setLogSuccess("logged in SucccessFully");
+        naviGate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+        setlogError("Your Email and password is not correct");
+      });
+  };
+
+  if (user) {
+    return <Navigate to="/"></Navigate>;
+  }
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -77,20 +94,27 @@ if (user){
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
+            <div className="mt-4  items-center justify-evenly">
+              <p>Sign In With:</p>
+              <div>
+                <button
+                  onClick={handlegoogleSignIn}
+                  className="mt-2 bg-lime-600 text-white px-2 py-1 rounded-lg"
+                >
+                  Google
+                </button>
+              </div>
+            </div>
           </form>
-          <div className="text-center mb-6">
+          <div className="text-center mb-4">
             <p>
               New Here ? Please Go To{" "}
               <Link className="font-bold text-green-600" to="/register">
                 Register
               </Link>
             </p>
-            {
-             logError && <p className="text-red-700">{logError}</p>
-            }{
-              logSuccess && <p className="text-green-600">{logSuccess}</p>
-            }
-           
+            {logError && <p className="text-red-700">{logError}</p>}
+            {logSuccess && <p className="text-green-600">{logSuccess}</p>}
           </div>
         </div>
       </div>

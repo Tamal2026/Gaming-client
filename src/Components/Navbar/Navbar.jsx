@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Aos from "aos";
@@ -6,11 +6,21 @@ import 'aos/dist/aos.css'
 import { useEffect } from "react";
 
 const Navbar = () => {
-const {user,logOut,} = useContext(AuthContext)
+  const [singInUser,setSingInUser] = useState(null);
+  const [loggedInUserInfo, setLoggedInUserInfo] = useState({
+    email: "",
+    photoURL: "https://i.ibb.co/ZTFfkFc/user.png", // Default User Image URL
+  });
+const {user,logOut} = useContext(AuthContext)
 Aos.init({duration:'2000'});
-useEffect(()=>{
-
-},[]) 
+useEffect(() => {
+  if (user) {
+    setLoggedInUserInfo({
+      email: user.email || "",
+      photoURL: user.photoURL || "https://i.ibb.co/ZTFfkFc/user.png",
+    });
+  }
+}, [user]);
 const handleSignout = ()=>{
 logOut()
 .then()
@@ -70,12 +80,13 @@ const navLinks =
           </ul>
         </div>
         
-        <div className="navbar-end gap-3">
-       {
-        user &&  <div className="w-10 ">
-        <img className="rounded-full" src="https://i.ibb.co/ZTFfkFc/user.png" />
-      </div>
-       }
+        <div className=" navbar-end gap-3">
+        {user && (
+          <div className="flex  pr-4 gap-4 items-center">
+            <div><p>{loggedInUserInfo.email}</p></div>
+            <img className="rounded-full w-10" src={loggedInUserInfo.photoURL} alt="User" />
+          </div>
+        )}
         {
           user ?  <button onClick={handleSignout} className="btn btn-primary bg-red-600">Logout
           </button> :
