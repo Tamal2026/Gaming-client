@@ -1,4 +1,4 @@
-####### 1 Write the `correct answer` from the following options and give an explanation (2-5 lines).
+ 1. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
 ```javascript
 let greeting;
@@ -57,10 +57,9 @@ console.log(food);
 
 #### Answer: A
 
-<i>In this I reassain the Favourite Food property of the Info obj to the last emoji but it does not affect the orginal food Array</i>
+In this I reassain the Favourite Food property of the Info obj to the last emoji but it does not affect the orginal food Array
 
-</p>
-</details>
+
 
 ###### 4. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
