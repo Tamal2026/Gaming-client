@@ -1,8 +1,14 @@
-# React + Vite
+Some Features And Funtionalites I Added to my Project.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* User Registration and Authentication
+* User Have to Login For see Every post...
+* When User logged in the email and profile pic of the user will show on the right nav
+* Google Login System Added
+* Website FUll responsive for mobile device and PC
+* Include Aos Package for looking website Smart
+* Password Validation add for Uppercase and  Special character
+* there is 2 other section in Private route..Without login User can not see that route
+* When USer click See Details if not logged in ..redirect to login page
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Webite Name: Gaming Event 2023
+link: https://event-ph.web.app/
